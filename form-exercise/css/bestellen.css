@@ -1,0 +1,72 @@
+.labelWidthS {
+	width:100px;
+}
+
+.labelWidth {
+	width: 200px;
+}
+.labelWidthL {
+	width: 300px;
+}
+.labelWidthT {
+	width:363px;
+}
+
+.inputWidthS {
+	width:50px;
+}
+
+.inputWidthM {
+	width:100px;
+}
+
+.inputWidthL {
+	width:400px;
+}
+
+legend {
+	/**/
+}
+.test {
+	display:inline-block;
+	width:200px;
+}
+.req {
+	color: #c00;
+}
+.bd {
+	position:relative;
+	top:-2px;
+	border:1px solid #ccc;
+}
+
+.grey {
+	color:#ccc;
+}
+
+.inputDefault {
+	color:#888;
+}
+
+#formWrapper {
+	width:600px;
+}
+
+#topDiv {
+	width:900px;
+	height:120px;
+}
+#orderFormulier {
+	width:900px;
+	margin-left:20px;
+}
+
+#bestelSet, #priceSet, {
+	width:650px;
+}
+.error {
+	color:#c00;
+}
+.error label  {
+		margin-left:10px;
+}

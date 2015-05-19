@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bestellen PARTY-BOX</title>
+	<link rel="stylesheet" href="css/bestellen.css">
+	<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/button.css">
+    <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+	</body>
+</head>
+<body>
+	<div id="wrapper" class="">
+	<br>
+	<div id="orderFormulier" class="">
+		<h1 id="ehbo-box_bestellen">Party-Box Bestellen</h1>
+		<hr>
+		<p>
+			Met het onderstaande formulier kunt u &eacute;&eacute;n of meerdere Party-Boxen bestellen. U betaalt pas na ontvangst van uw bestelling.
+		</p>
+		
+		<form action="bestellen.php" method="post" accept-charset="utf-8" id="orderForm">
+			<p>
+				Geeft u alstublieft aan hoeveel Party-Boxen u wilt bestellen en in welke gewenste kleur:
+			</p>
+			<fieldset id="bestelSet">
+				<dl class="clear">
+					<dt class="left labelWidthL"><img src="img/rood.png" alt="Rood" class="bd">&nbsp;<label for="Rood">Rood </label></dt>
+					<dd class="right"><label for="">aantal:&nbsp;</label><input id="redBox" name="redBox" value="0"  class="inputWidthS box" tabIndex="1" type="number" min="0"></dd>
+				</dl><br>
+				<dl class="clear">
+					<dt class="left labelWidthL"><img src="img/grijs.png" alt="Grijs" class="bd">&nbsp;<label for="GrijsBox">Grijs </label></dt>
+					<dd class="right"><label for="">aantal:&nbsp;</label><input id="greyBox" name="greyBox" value="0" class="inputWidthS box" type="number" min="0"></dd>
+				</dl><br>
+				<dl class="clear">
+					<dt class="left labelWidthL"><img src="img/blauw.png" alt="Blauw" class="bd">&nbsp;<label for="BlauwBox">Blauw </label></dt>
+					<dd class="right"><label for="">aantal:&nbsp;</label><input id="blueBox" name="blueBox" value="0" class="inputWidthS box" type="number" min="0"></dd>
+				</dl><br>
+				<dl class="clear">
+					<dt class="left labelWidthL"><img src="img/zwart.png" alt="Zwart" class="bd">&nbsp;<label for="ZwartBox">Zwart </label></dt>
+					<dd class="right"><label for="">aantal:&nbsp;</label><input id="blackBox" name="blackBox" value="0" class="inputWidthS box" type="number" min="0"></dd>
+				</dl><br>
+				<dl class="clear">
+					<dt class="left labelWidthT"><em>Totaal aantal Party-Boxen: <span id="boxTotal">0</span></em></dt>
+					<dd class="right"><strong></strong></dd>
+				</dl>
+			</fieldset>
+			<hr>
+			<fieldset id="priceSet">
+				<dl class="clear">
+					<dt class="left labelWidthT">Stuksprijs per Box</dt>
+					<dd class="right">&euro; <span id="pricePerBox">20</span>,-</dd>
+				</dl><br>
+				<dl class="clear">
+					<dt class="left labelWidthT">Verzend- en verpakkingskosten</dt>
+					<dd class="right">&euro; <span id="shippingCosts">6</span>,-</dd>
+				</dl><br>
+				<dl class="clear">
+					<dt class="left labelWidthT"><strong>Totaal incl. BTW</strong></dt>
+					<dd class="right"><strong>&euro; <span id="boxPrice"><strong>0</strong></span>,-</strong></dd>
+				</dl>
+			</fieldset>
+			<hr>
+
+			<fieldset id="deliverySet">
+				<legend>Bezorg- en factuuradres<span class="req">*</span><br><br></legend>
+				<dl class="clear">
+					<dt class="left labelWidth"><label>Naam<span class="req">*</span> </label></dt>
+					<dd class="left"><input type="text" name="naam" value="" placeholder="Voornaam en Achternaam&hellip;" class="inputWidthL" ></dd>
+				</dl><br>
+				<dl class="clear"> 
+					<dt class="left labelWidth"><label>Straat<span class="req">*</span></label></dt>
+					<dd class="left"><input type="text" name="straat" value="" placeholder="Straat&hellip;" class="inputWidthL"></dd>
+				</dl><br>
+				<dl class="clear">
+					<dt class="left labelWidth"><label>Huisnummer<span class="req">*</span></label></dt>
+					<dd class="left"><input type="text" name="huisnummer" value="" placeholder="&hellip;" class="inputWidthS" > (alleen nummer)</dd>
+				</dl><Br>
+				<dl class="clear">
+					<dt class="left labelWidth"><label>Toevoeging </label></dt>
+					<dd class="left"><input type="text" name="toevoeging" value="" placeholder="&hellip;" class="inputWidthS"> (bv. a, bis)</dd>
+				</dl><br>
+				<dl class="clear">
+					<dt class="left labelWidth"><label>Postcode<span class="req">*</span></label></dt>
+					<dd class="left"><input type="text" name="postcode" value="" placeholder="Postcode&hellip;" class="inputWidthM"></dd>
+				</dl><br>
+				<dl class="clear">
+					<dt class="left labelWidth"><label>Plaats<span class="req">*</span></label></dt>
+					<dd class="left"><input type="text" name="plaats" value="" placeholder="Plaats&hellip;" class="inputWidthL"></dd>
+				</dl><br>		
+				<dl class="clear">
+					<dt class="left labelWidth"><label>Telefoonnummer</label></dt>
+					<dd class="left"><input type="text" name="telefoonnummer" value="" placeholder="Uw Telefoonnummer&hellip;" class=""></dd>
+				</dl><br>		
+				<dl class="clear">
+					<dt class="left labelWidth"><label>E-mail<span class="req">*</span></label></dt>
+					<dd class="left"><input type="text" name="email" value="" placeholder="Uw E-mailadres&hellip;" class=""></dd>
+				</dl>			
+			</fieldset>
+			<p>
+				Velden met een (<span class="req">*</span>) zijn verplicht.
+			</p>
+			<hr>
+			<fieldset id="additionalSet">
+				<legend>Uiteraard kunt u ook gratis promotiemateriaal bestellen ten behoeve van uw praktijk of ouderencentrum<br><br></legend>
+				<dl class="clear">
+					<dt class="left labelWidthL"><label class="labelWidth">Gratis Reclameflyer PARTY Box </label></dt>
+					<dd class="left"><label for="">aantal:&nbsp;</label><input name="flyer" value="0" class="inputWidthM" type="number" min="0" step="1"></dd>
+				</dl><br>		
+				<dl class="clear">
+					<dt class="left labelWidthL"><label class="test">Gratis Handout Kaarten </label></dt>
+					<dd class="left"><label for="">aantal:&nbsp;</label><input name="handout" value="0" class="inputWidthM" type="number" min="0" step="1"></dd>
+				</dl>			
+			</fieldset>
+			<hr>
+			<fieldset>
+				<legend>Algemene voorwaarden<br><br></legend>
+				<input type="checkbox" name="alg" value="AV"><label for="agl"> Ik ga akkoord met de <a href="#">algemene voorwaarden</a>.</label>
+			</fieldset>
+			<hr>
+			<p><input type="submit" value="Bestelling Verzenden"></p>
+			</div>
+		</form>
+		
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/localization/messages_nl.js"></script>
+	<script src="js/form.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

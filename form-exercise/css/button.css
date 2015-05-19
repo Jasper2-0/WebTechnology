@@ -1,0 +1,306 @@
+/* Main button classes */
+.button {
+	position: relative;
+	overflow: visible;
+	display:inline-block;
+	padding: 0.33em 1em;
+	width:8em;
+	border:1px solid;
+	border-top-color: #eee;
+	border-left-color: #eee;
+	border-bottom-color:#aaa;
+	border-right-color: #aaa;
+	margin: 0;
+	text-align:center;
+	text-decoration:none;
+	text-shadow: 1px 1px 0 #eee;
+	font: 12px/normal Helvetica;
+	color: #444;
+	cursor:pointer;
+	outline:none;
+	background-color: #ccc;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8f8f8), to(#ccc));
+    background-image: -moz-linear-gradient(#f8f8f8, #ccc);
+    background-image: -o-linear-gradient(#f8f8f8, #ccc);
+    background-image: linear-gradient(#f8f8f8, #ccc);
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    -o-background-clip: padding-box; 
+    /*background-clip: padding-box;*/ /* commented out due to Opera 11.10 bug */
+    -webkit-border-radius: 0.33em; 
+    -moz-border-radius: 0.33em; 
+    border-radius: 0.33em; 
+    /* IE hacks */
+    zoom: 1; 
+    *display: inline;
+
+}
+
+.button:visited{
+	color: #444;
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button.active {
+	border: 1px solid;
+	border-top-color: #7ebaf4;
+	border-left-color: #7ebaf4;
+	border-bottom-color: #265788;
+	border-right-color: #265788;
+    text-decoration: none; 
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3); 
+    color: #fff; 
+    background-color: #0092b6;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#66bed3), to(#0092b6));
+    background-image: -moz-linear-gradient(#66bed3, #0092b6);
+    background-image: -o-linear-gradient(#66bed3, #0092b6);
+    background-image: linear-gradient(#66bed3, #0092b6);
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+
+}
+
+.button:active,
+.button.active {
+	border:1px solid;
+	border-top: 1px solid #007592;
+	border-left: 1px solid #007592;
+	border-bottom: 1px solid #a3d8e5;
+	border-right: 1px solid #a3d8e5;
+    background-color: #3072b3;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0092b6), to(#66bed3));
+    background-image: -moz-linear-gradient(#0092b6, #66bed3);
+    background-image: -o-linear-gradient(#0092b6, #66bed3);
+    background-image: linear-gradient(#0092b6, #66bed3);
+	box-shadow: inset 1px 1px 3px rgba(0,0,0,0.33);
+
+}
+
+/* overrides for extra padding on button elements in Firefox */
+.button::-moz-focus-inner {
+	padding:0;
+	border:0;
+}
+
+/* Disable .................................................................*/
+.button.disable {
+	opacity:0.5;
+}
+/* Primary .................................................................*/
+.button.primary {
+	font-weight: bold;
+}
+
+/* Danger .................................................................*/
+
+.button.danger {
+	color:#b00;
+}
+
+.button.danger:hover,
+.button.danger:focus,
+.button.danger:active {
+	border-color: #b53f3a;
+    border-bottom-color: #a0302a;
+    color: #fff; 
+    background-color: #dc5f59;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dc5f59), to(#b33630));
+    background-image: -moz-linear-gradient(#dc5f59, #b33630);
+    background-image: -o-linear-gradient(#dc5f59, #b33630);
+    background-image: linear-gradient(#dc5f59, #b33630);
+	
+}
+
+.button.danger:active,
+.button.danger.active {
+	box-shadow: inset 1px 1px 3px rgba(0,0,0,0.33);
+    border-color: #a0302a;
+    border-bottom-color: #bf4843;
+    background-color: #b33630;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b33630), to(#dc5f59));
+    background-image: -moz-linear-gradient(#b33630, #dc5f59);
+    background-image: -o-linear-gradient(#b33630, #dc5f59);
+    background-image: linear-gradient(#b33630, #dc5f59);	
+}
+
+/* Handle different sizes ...................................................*/
+.button.small {
+	font:10px/normal Helvetica;
+	padding:0.25em;
+	-webkit-border-radius: 1em; 
+    -moz-border-radius: 1em; 
+    border-radius: 1em;
+}
+
+.button.large {
+	font:14px/normal Helvetica;
+}
+
+.button.short {
+	width: 3em;
+}
+
+.button.medium {
+	width: 5em;
+}
+
+.button.img-only {
+	width: 0.5em;
+	padding-bottom:0.45em;
+}
+
+.button.extra-wide {
+	width: 12em;
+}
+/* Button Icon ..............................................................*/
+.button.icon {
+	text-align:left;
+}
+
+.button.icon:before {
+	content: "";
+	position: relative;
+	top:1px;
+	float:left;
+	
+	width: 12px;
+	height: 12px;
+	margin: 0 0.75em 0 -0.25em;
+	background-color: #f00;
+	background: url(../img/icons.png);
+}
+
+.button.arrowup.icon:before { background-position: 0 0px; }
+.button.arrowup.icon:hover:before,
+.button.arrowup.icon:focus:before,
+.button.arrowup.icon:active:before { background-position: -12px -0px; }
+
+.button.arrowright.icon:before { background-position: 0 -12px; }
+.button.arrowright.icon:hover:before,
+.button.arrowright.icon:focus:before,
+.button.arrowright.icon:active:before { background-position: -12px -12px; }
+
+.button.arrowdown.icon:before { background-position: 0 -24px; }
+.button.arrowdown.icon:hover:before,
+.button.arrowdown.icon:focus:before,
+.button.arrowdown.icon:active:before { background-position: -12px -24px; }
+
+.button.arrowleft.icon:before { background-position: 0 -36px; }
+.button.arrowleft.icon:hover:before,
+.button.arrowleft.icon:focus:before,
+.button.arrowleft.icon:active:before { background-position: -12px -36px; }
+
+.button.add.icon:before { background-position: 0 -48px; }
+.button.add.icon:hover:before,
+.button.add.icon:focus:before,
+.button.add.icon:active:before { background-position: -12px -48px; }
+
+.button.min.icon:before { background-position: 0 -60px; }
+.button.min.icon:hover:before,
+.button.min.icon:focus:before,
+.button.min.icon:active:before { background-position: -12px -60px; }
+
+.button.document.icon:before { background-position: 0 -72px; }
+.button.document.icon:hover:before,
+.button.document.icon:focus:before,
+.button.document.icon:active:before { background-position: -12px -72px; }
+
+.button.close.icon:before { background-position: 0 -84px; }
+.button.close.icon:hover:before,
+.button.close.icon:focus:before,
+.button.close.icon:active:before { background-position: -12px -84px; }
+
+.button.download.icon:before { background-position: 0 -96px; }
+.button.download.icon:hover:before,
+.button.download.icon:focus:before,
+.button.download.icon:active:before { background-position: -12px -96px; }
+
+.button.edit.icon:before { background-position: 0 -108px; }
+.button.edit.icon:hover:before,
+.button.edit.icon:focus:before,
+.button.edit.icon:active:before { background-position: -12px -108px; }
+
+.button.user.icon:before { background-position: 0 -120px; }
+.button.user.icon:hover:before,
+.button.user.icon:focus:before,
+.button.user.icon:active:before { background-position: -12px -120px; }
+
+.button.folder.icon:before { background-position: 0 -132px; }
+.button.folder.icon:hover:before,
+.button.folder.icon:focus:before,
+.button.folder.icon:active:before { background-position: -12px -132px; }
+
+.button.home.icon:before { background-position: 0 -144px; }
+.button.home.icon:hover:before,
+.button.home.icon:focus:before,
+.button.home.icon:active:before { background-position: -12px -144px; }
+
+.button.settings.icon:before { background-position: 0 -156px; }
+.button.settings.icon:hover:before,
+.button.settings.icon:focus:before,
+.button.settings.icon:active:before { background-position: -12px -156px; }
+
+
+/* Button Group ............................................................*/
+.button-group {
+	display:inline-block;
+	list-style:none;
+	padding:0;
+	margin:0;
+	/*	IE hacks */
+	zoom: 1;
+	*display:inline;
+}
+
+.button + .button,
+.button + .button-group,
+.button-group + .button,
+.button-group + .button-group {
+	margin-left:0.25em;
+}
+
+.button-group li {
+	float: left;
+	padding:0;
+	margin:0;
+}
+.button-group .button {
+	float: left;
+	margin-left:0;
+
+}
+
+.button-group > .button:not(:first-child):not(:last-child),
+.button-group li:not(:first-child):not(:last-child) .button {
+	-webkit-border-radius: 0em; 
+    -moz-border-radius: 0em; 
+    border-radius: 0em;
+}
+
+.button-group > .button:first-child,
+.button-group li:first-child .button {
+	margin-left:0;
+	-webkit-border-top-right-radius: 0; 
+    -webkit-border-bottom-right-radius: 0; 
+    -moz-border-radius-topright: 0; 
+    -moz-border-radius-bottomright: 0; 
+    border-top-right-radius: 0; 
+    border-bottom-right-radius: 0;
+}
+
+.button-group > .button:last-child,
+.button-group li:last-child > .button { 
+    -webkit-border-top-left-radius: 0; 
+    -webkit-border-bottom-left-radius: 0; 
+    -moz-border-radius-topleft: 0; 
+    -moz-border-radius-bottomleft: 0; 
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0; 
+}
+
+/* Button Container ........................................................*/
+.button-container .button,
+.button-container .button-group {
+    vertical-align: top;
+}
